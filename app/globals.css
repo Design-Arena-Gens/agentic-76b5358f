@@ -1,0 +1,58 @@
+:root{--bg: #0b1021; --muted:#0f1530; --text:#e6eaff; --sub:#b7c0ff; --primary:#7c3aed; --cyan:#06b6d4; --card:#0e1533; --ring:rgba(124,58,237,.4)}
+*{box-sizing:border-box}
+html,body{padding:0;margin:0;background:radial-gradient(1200px 600px at 80% -10%, rgba(6,182,212,.12), transparent 60%), radial-gradient(1000px 500px at -10% -10%, rgba(124,58,237,.12), transparent 60%), var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"}
+main{min-height:60vh}
+a{color:inherit; text-decoration:none}
+.container{max-width:1100px; margin:0 auto; padding:0 20px}
+
+/* Header */
+.site-header{position:sticky; top:0; backdrop-filter:saturate(1.2) blur(8px); background:rgba(11,16,33,.6); border-bottom:1px solid rgba(255,255,255,.06); z-index:50}
+.header-inner{display:flex; align-items:center; justify-content:space-between; height:64px}
+.brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.3px}
+.main-nav{display:flex; gap:18px; align-items:center}
+.main-nav a{opacity:.9}
+.main-nav a:hover{opacity:1}
+
+/* Buttons */
+.btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; border:1px solid rgba(255,255,255,.08); background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); color:var(--text)}
+.btn-primary{background:linear-gradient(90deg, var(--primary), var(--cyan)); border:none; box-shadow:0 10px 24px rgba(124,58,237,.25)}
+.btn-primary:hover{filter:brightness(1.05)}
+
+/* Hero */
+.hero{position:relative; padding:72px 0 32px; overflow:hidden}
+.hero .bg-waves{position:absolute; inset:0; pointer-events:none}
+.hero .bg-waves svg{position:absolute; width:120%; left:-10%; top:-10%; opacity:.25}
+.hero .lead{color:var(--sub)}
+.hero h1{font-size:48px; line-height:1.05; margin:0 0 14px; letter-spacing:.2px}
+.hero .actions{display:flex; gap:12px; margin-top:18px}
+.badges{display:flex; gap:10px; margin-top:16px}
+.badge{border:1px solid rgba(255,255,255,.08); padding:6px 10px; border-radius:999px; font-size:12px; color:var(--sub); background:rgba(255,255,255,.03)}
+
+/* Sections */
+.section{padding:56px 0}
+.section h2{margin:0 0 12px}
+.section .sub{color:var(--sub); margin:0 0 20px}
+.grid{display:grid; gap:16px}
+.grid.cols-3{grid-template-columns: repeat(3, 1fr)}
+@media(max-width:900px){.grid.cols-3{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:18px}
+.card h3{margin:0 0 6px}
+.card p{margin:0; color:var(--sub)}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,.06); margin-top:48px; background:rgba(11,16,33,.6)}
+.footer-inner{display:flex; gap:12px; align-items:center; justify-content:space-between; height:72px}
+.footer-links{display:flex; gap:14px}
+
+/* Forms */
+.form{display:grid; gap:12px; max-width:640px}
+.input, .textarea, .select{width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.02); color:var(--text)}
+.textarea{min-height:120px}
+.input:focus, .textarea:focus, .select:focus{outline:2px solid var(--ring); border-color:transparent}
+.form-actions{display:flex; gap:10px; align-items:center}
+
+/* Utilities */
+.muted{color:var(--sub)}
+.kpis{display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; margin-top:18px}
+.kpi{padding:14px; border:1px solid rgba(255,255,255,.06); border-radius:12px; background:rgba(255,255,255,.02); text-align:center}
+@media(max-width:900px){.kpis{grid-template-columns:1fr 1fr}}
